@@ -1,6 +1,6 @@
 # NextJs
 
-## Conhecendo a estrutura initial do projeto
+## Conhecendo a estrutura inicial do projeto
 
 A estrutura initial do Next.js na versão 9.5.2 vem com algumas pastas que mostram um pouco como o framework funciona. Dentre elas estão:
 
