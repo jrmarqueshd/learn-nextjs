@@ -42,12 +42,12 @@ Adorei por ser bem clean e objetiva, mas sinto que para uma aplicação ser esca
 
 ## Components do NextJs
 
-### <Head />
+### < Head />
 
 É utilizado para definir dinâmicamente o <head></head> de cada página, nele podemos utilizar importação de fonts e scripts de terceiros, e podemos trabalhar com a dinamicidade de fazer essas importação de forma totalmente independente e somente onde queremos.
 
 Acredito que o ideal para essa tag seja componentiza-la e importar o que queremos como default, no exemplo de fonts e afins por lá, e incromentamos o que precisamos direto pelo componente quando preciso.
 
-### <Link />
+### < Link />
 
 É o componente que faz a navegação acontecer entre as páginas, funciona basicamente como o <a> do HTML.
