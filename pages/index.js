@@ -5,24 +5,21 @@ import { useRouter } from "next/router";
 import styles from "../styles/Home.module.css";
 
 export default function Home() {
-	const loginRef = useRef(null);
-	const passwordRef = useRef(null);
+	const userRef = useRef(null);
 
 	const router = useRouter();
 
 	function handleLogin(e) {
 		e.preventDefault();
 
-		const login = loginRef.current.value;
-		const password = passwordRef.current.value;
+		const user = userRef.current.value;
 
-		if (!login || !password) return alert("Preencha todos os campos");
+		if (!user) return alert("Preencha todos os campos");
 
 		router.push({
 			pathname: "/dashboard",
 			query: {
-				login,
-				password,
+				user,
 			},
 		});
 	}
@@ -30,36 +27,25 @@ export default function Home() {
 	return (
 		<div className={styles.container}>
 			<Head>
-				<title>Create Next App</title>
+				<title>Buscar usuário no GitHub</title>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
 			<form onSubmit={handleLogin} className={styles.boxLogin}>
-				<h1 className={styles.title}>Login</h1>
+				<h1 className={styles.title}>Buscar usuário do Github</h1>
 
-				<label className={styles.label} htmlFor="login">
-					Usuário
+				<label className={styles.label} htmlFor="user">
+					Username
 				</label>
 				<input
-					ref={loginRef}
-					id="login"
-					placeholder="Usuário"
+					ref={userRef}
+					id="user"
+					placeholder="username"
 					className={styles.input}
 					type="text"
 				/>
 
-				<label className={styles.label} htmlFor="password">
-					Senha
-				</label>
-				<input
-					ref={passwordRef}
-					id="password"
-					className={styles.input}
-					type="password"
-					placeholder="Senha"
-				/>
-
-				<button className={styles.button}>Logar</button>
+				<button className={styles.button}>Buscar</button>
 			</form>
 		</div>
 	);

@@ -12,24 +12,42 @@
 	text-align: center;
 }
 
+.avatar {
+	display: block;
+	border-radius: 100%;
+	margin: 0 auto;
+	width: 100px;
+	height: auto;
+}
+
 .box {
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
 	flex-direction: column;
 	border-radius: 17px;
-	height: 350px;
+	height: auto;
 	width: 100%;
 	max-width: 350px;
 	background-color: #222;
 	color: #f0f0f0;
 	padding: 30px 50px;
+	text-align: center;
+}
+
+.info {
+	width: 100%;
+	margin-bottom: 10px;
 }
 
 .info b {
+	display: block;
 	font-size: 18px;
 	line-height: 36px;
-	margin-right: 10px;
+}
+
+.info a {
+	margin-top: 25px;
 }
 
 .link {
