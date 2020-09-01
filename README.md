@@ -25,6 +25,7 @@ A estrutura initial do Next.js na versão 9.5.2 vem com algumas pastas que mostr
 - styles/globals.css: Arquivo que auto se intitula. Apesar de ser uma arquivo simples de estilo, ele é o principal que deve ser chamado somente no arquivo `_app.js` que está dentro da pasta <u>pages</u>. Algumas coisas me fizeram pensar um pouco em voltar a usar pure CSS em aplicações mais simples. Por enquanto é só um pensamento mesmo, ainda prefiro usar styled-components em qualquer tipo de aplicação, sinto que tenho muito mais a aplicação na mão de forma simples e sem a verbosidade que o pure CSS cria.
 
 - styles/Home.module.css: Ainda não entendi muito bem a motivação de usar arquivos CSS com esse formato, mas pelo que parece é uma metodologia chamada de CSS Modules que permite a referenciação entre arquivos js e css. Mas não é o que está refletido no código, porque esse arquivo de exemplo vem com o nome Home, e o arquivo index.js é onde ele está sendo chamado, e mesmo assim lá o arquivo é chamado normalmente com `Home.module.css`, mas isso deve ser um caso muito especifico da Home com index.js. Vou testar com outros arquivos pra tentar entender a real necessidade de utilizar esse formato.
+  Edite 1: Descobri que sem o .module.css a aplicação entende que é um estilo global, e reclama que ele deve ser chamado somente no \_app.js
 
 ### O que temos de resto
 
